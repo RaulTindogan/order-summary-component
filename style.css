@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+    background-size: 100%;
+    background-position: top;
+}
+
+main {
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.info-container {
+    padding: 20px 20px 30px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--Dark-blue);
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+}
+
+p {
+    color: var(--Desaturated-blue);
+}
+
+.info-container--paragraph {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    background-color: var(--Very-pale-blue);
+    padding: 10px;
+    font-size: .8rem;
+}
+
+.plan-info--name {
+    font-weight: 700;
+}
+
+.plan-link {
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+button {
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed-btn {
+    padding: 15px 0;
+    border-radius: 10px;
+    background-color: var(--Bright-blue);
+    color: white;
+    box-shadow: 0 10px 10px hsla(0, 0%, 44%, 0.312);
+    margin-bottom: 1.2rem;
+}
+
+.proceed-btn:hover{
+    background-color: hsla(256, 72%, 51%, 0.792); 
+}
+
+.plan-link:hover {
+    color: hsla(256, 72%, 51%, 0.792); 
+    text-decoration: none;
+}
+
+.cancel-btn {
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url('./images/pattern-background-desktop.svg');
+    }
+
+    main {
+        width: 400px;
+    }
+
+    .info-container {
+        padding: 50px;
+    }
+}
